@@ -6,16 +6,14 @@ class Point {
 	 * @param {number} y Y-coordinate
 	 */
 	constructor(x, y) {
-		/** @member {number} */
 		this._x = x || 0;
-		/** @member {number} */
 		this._y = y || 0;
 		this._r = null;
 		this._theta = null;
 	}
 	/**
-	 * Getter for the x property.
-	 * @returns {number} - The actual x value
+	 * The X-coordinate
+	 * @type {number}
 	 */
 	get x() {
 		if (this._x === null) {
@@ -23,17 +21,13 @@ class Point {
 		}
 		return this._x;
 	}
-	/**
-	 * Setter for the x property.
-	 * @param {number} val - The new x value
-	 */
 	set x(val) {
 		this._x = val;
 		this._r = this._theta = null;
 	}
 	/**
-	 * Getter for the y property.
-	 * @returns {number} - The actual y value
+	 * The Y-coordinate
+	 * @type {number}
 	 */
 	get y() {
 		if (this._y === null) {
@@ -41,17 +35,13 @@ class Point {
 		}
 		return this._y;
 	}
-	/**
-	 * Setter for the y property.
-	 * @param {number} val - The new value
-	 */
 	set y(val) {
 		this._y = val;
 		this._r = this._theta = null;
 	}
 	/**
-	 * Getter for the r property.
-	 * @returns {number} - The actual y value
+	 * The polar radius
+	 * @type {number}
 	 */
 	get r() {
 		if (this._r === null) {
@@ -59,17 +49,13 @@ class Point {
 		}
 		return this._r;
 	}
-	/**
-	 * Setter for the r property.
-	 * @param {number} val - The new value
-	 */
 	set r(val) {
 		this._r = val;
 		this._x = this._y = null;
 	}
 	/**
-	 * Getter for the theta property.
-	 * @returns {number} - The actual theta value
+	 * The polar angle (radian)
+	 * @type {number}
 	 */
 	get theta() {
 		if (this._r === null) {
@@ -77,10 +63,6 @@ class Point {
 		}
 		return this._theta;
 	}
-	/**
-	 * Setter for the theta property.
-	 * @param {number} val - The new value
-	 */
 	set theta(val) {
 		this._theta = val;
 		this._x = this._y = null;
@@ -101,7 +83,7 @@ class Point {
 	 * @private
 	 * @param   {function} fct - The function to apply to each coordinates
 	 * @param   {object}   pt  - Object Arguments, Array, Point or scalar value
-	 * @returns {this}     - this
+	 * @returns {Points}   - this
 	 */
 	_recurse(fct, pt) {
 		if (arguments.length > 2) {
@@ -113,18 +95,40 @@ class Point {
 		} else if (pt.length !== undefined) {
 			this._recurse(fct, [].slice.call(pt, 0));
 		} else if (pt instanceof Point) {
-			this.x = fct(this.x, pt.x);
-			this.y = fct(this.y, pt.y);
+			this.setCartesian(fct(this.x, pt.x), fct(this.y, pt.y));
 		} else {
-			this.x = fct(this.x, pt);
-			this.y = fct(this.y, pt);
+			this.setCartesian(fct(this.x, pt), fct(this.y, pt));
 		}
+		return this;
+	}
+	/**
+	 * Sets the x and y at the same time (resets polar)
+	 * @param   {number} x The X-coordinate
+	 * @param   {number} y The Y-coordinate
+	 * @returns {Point}  this
+	 */
+	setCartesian(x, y) {
+		this._x = x;
+		this._y = y;
+		this._r = this._theta = null;
+		return this;
+	}
+	/**
+	 * Sets the r and theta at the same time (resets cartesian)
+	 * @param   {number} radius The r-coordinate
+	 * @param   {number} theta  The polar angle
+	 * @returns {Point}  this
+	 */
+	setPolar(radius, theta) {
+		this._r = radius;
+		this._theta = theta;
+		this._x = this._y = null;
 		return this;
 	}
 	/**
 	 * Add one or many points to object
 	 * @param {variable} - See method _recurse
-	 * @returns {this}   - this
+	 * @returns {Point}    - this
 	 */
 	add() {
 		return this._recurse((a, b) => (a + b), arguments);
@@ -132,7 +136,7 @@ class Point {
 	/**
 	 * Returns a copy of the point added with given points
 	 * @param {variable} - See method _recurse
-	 * @returns {this}   - this
+	 * @returns {Point}   - this
 	 */
 	sum() {
 		return this.clone().ajouter(arguments);
@@ -140,7 +144,7 @@ class Point {
 	/**
 	 * Returns a new Point object with sum of the given points
 	 * @param {variable} - See method _recurse
-	 * @returns {this}   - this
+	 * @returns {Point}   - this
 	 */
 	static sum() {
 		return new Point().ajouter(arguments);
@@ -148,7 +152,7 @@ class Point {
 	/**
 	 * Subtracts given points
 	 * @param {variable} - See method _recurse
-	 * @returns {this}   - this
+	 * @returns {Point}   - this
 	 */
 	subtract() {
 		return this._recurse((a, b) => (a - b), arguments);
@@ -156,7 +160,7 @@ class Point {
 	/**
 	 * Returns a copy with subtracted given points
 	 * @param {variable} - See method _recurse
-	 * @returns {this}   - this
+	 * @returns {Point}   - this
 	 */
 	difference() {
 		return this.clone().subtract(arguments);
@@ -164,7 +168,7 @@ class Point {
 	/**
 	 * Returns a new Point object with the difference of the given points
 	 * @param {variable} - See method _recurse
-	 * @returns {this}   - this
+	 * @returns {Point}   - this
 	 */
 	static difference() {
 		return new Point().subtract(arguments);
@@ -172,7 +176,7 @@ class Point {
 	/**
 	 * Multiplies the given points
 	 * @param {variable} - See method _recurse
-	 * @returns {this}   - this
+	 * @returns {Point}   - this
 	 */
 	multiply() {
 		return this._recurse((a, b) => (a * b), arguments);
@@ -180,7 +184,7 @@ class Point {
 	/**
 	 * Returns of the point multiplied with given points
 	 * @param {variable} - See method _recurse
-	 * @returns {this}   - this
+	 * @returns {Point}   - this
 	 */
 	product() {
 		return this.clone().multiply(arguments);
@@ -188,7 +192,7 @@ class Point {
 	/**
 	 * Returns a new Point object with the product of the given points
 	 * @param {variable} - See method _recurse
-	 * @returns {this}   - this
+	 * @returns {Point}   - this
 	 */
 	static product() {
 		return new Point().multiply(arguments);
@@ -196,7 +200,7 @@ class Point {
 	/**
 	 * Divide by the given points
 	 * @param {variable} - See method _recurse
-	 * @returns {this}   - this
+	 * @returns {Point}   - this
 	 */
 	divideBy() {
 		return this._recurse((a, b) => ((!b) ? 0 : a / b), arguments);
@@ -204,7 +208,7 @@ class Point {
 	/**
 	 * Returns of the point divides by the given points
 	 * @param {variable} - See method _recurse
-	 * @returns {this}   - this
+	 * @returns {Point}   - this
 	 */
 	quotient() {
 		return this.clone().divideBy(arguments);
@@ -212,14 +216,14 @@ class Point {
 	/**
 	 * Returns a new Point object with the quotient of the given points
 	 * @param {variable} - See method _recurse
-	 * @returns {this}   - this
+	 * @returns {Point}   - this
 	 */
 	static quotient() {
 		return new Point().divideBy(arguments);
 	}
 	/**
 	 * Inverts the signe of the coordinates
-	 * @returns {this} -this
+	 * @returns {Point} -this
 	 */
 	negate() {
 		this.x = -this.x;
@@ -243,7 +247,7 @@ class Point {
 	}
 	/**
 	 * Modifie le point pour inverser (1/x) les dimensions
-	 * @returns {this} - this
+	 * @returns {Point} - this
 	 */
 	inverser() {
 		this.x = 1 / this.x;
@@ -271,7 +275,7 @@ class Point {
 	/**
 	 * Rotates the point around the origin
 	 * @param   {number} angle - Radian angle
-	 * @returns {this}   - this
+	 * @returns {Point}   - this
 	 */
 	rotate(angle) {
 		angle *= Math.PI/180;
@@ -284,7 +288,7 @@ class Point {
 	 * Moves the point to a given location
 	 * @param   {object} x - A point or the x coordinate
 	 * @param   {number} y - The y coordinate
-	 * @returns {this}   - this
+	 * @returns {Point}   - this
 	 */
 	moveTo(x, y) {
 		if (arguments.length === 1) {
@@ -299,7 +303,7 @@ class Point {
 	 * Moves the point by a given increment
 	 * @param   {object} x - A point or the x coordinate
 	 * @param   {number} y - The y coordinate
-	 * @returns {this}   - this
+	 * @returns {Point}   - this
 	 */
 	moveBy(x, y) {
 		if (arguments.length === 1) {

@@ -1,6 +1,14 @@
 /*jslint browser:true,esnext:true*/
 /*globals Point*/
+/*exported Vector*/
 class Vector extends Point {
+	/**
+	 * Constructor
+	 * @param {number} x     The X-coordinate
+	 * @param {number} y     The Y-coordinate
+	 * @param {number} angle The angle in radians
+	 * @param {number} norm  The length of the vector
+	 */
 	constructor(x, y, angle, norm) {
 		super(x, y);
 		this._angle = angle || 0;
@@ -9,8 +17,8 @@ class Vector extends Point {
 		this._end = null;
 	}
 	/**
-	 * Getter for the start property.
-	 * @returns {number} - The actual start value
+	 * The starting Point object
+	 * @type {Point}
 	 */
 	get start() {
 		if (!this._start) {
@@ -18,11 +26,6 @@ class Vector extends Point {
 		}
 		return this._start;
 	}
-
-	/**
-	 * Setter for the start property.
-	 * @param {number} val - The new start value
-	 */
 	set start(value) {
 		this._x = value.x;
 		this._y = value.y;
@@ -30,28 +33,23 @@ class Vector extends Point {
 		this._norm = null;
 	}
 	/**
-	 * Getter for the end property.
-	 * @returns {number} - The actual end value
+	 * The ending Point object
+	 * @type {Point}
 	 */
 	get end() {
 		if (!this._end) {
-			this._end = Vector.unit(this._angle).multiply(this._norm);
+			this._end = new Point().setPolar(this._angle, this._norm);
 		}
 		return this._end;
 	}
-
-	/**
-	 * Setter for the end property.
-	 * @param {number} val - The new end value
-	 */
 	set end(value) {
 		this._end = value.clone();
 		this._angle = null;
 		this._norm = null;
 	}
 	/**
-	 * Getter for the angle property.
-	 * @returns {number} - The actual angle value
+	 * The angle in radians
+	 * @type {number}
 	 */
 	get angle() {
 		if (this._angle === null) {
@@ -59,18 +57,13 @@ class Vector extends Point {
 		}
 		return this._angle;
 	}
-
-	/**
-	 * Setter for the angle property.
-	 * @param {number} val - The new angle value
-	 */
 	set angle(value) {
 		this._angle = value.clone();
 		this._end = null;
 	}
 	/**
-	 * Getter for the norm property.
-	 * @returns {number} - The actual norm value
+	 * The length of the vector
+	 * @type {number}
 	 */
 	get norm() {
 		if (this._norm === null) {
@@ -78,17 +71,27 @@ class Vector extends Point {
 		}
 		return this._norm;
 	}
-
-	/**
-	 * setter for the norm property.
-	 * @param {number} val - The new norm value
-	 */
 	set norm(value) {
 		this._norm = value.clone();
 		this._end = null;
 	}
+	/**
+	 * Returns a unitary vector at the origin with a given angle
+	 * @param   {number} angle The angle in radians
+	 * @returns {Point}  [[Description]]
+	 */
 	static unit(angle) {
 		return new Point(Math.cos(angle), Math.sin(angle));
+	}
+	static fromPoints(start, end) {
+		var result = new this();
+		result.start = start;
+		result.end = end;
+		return result;
+	}
+	fraction(ratio) {
+		return this.end.difference(this).multiply(ratio).add(this);
+
 	}
 
 }
