@@ -95,7 +95,7 @@ class Polyline {
 	 * @returns {number} The index of the object (of -1 if not found)
 	 */
 	indexOf(point) {
-		return this._points(point);
+		return this._points.indexOf(point);
 	}
 	//*** STATIC METHODS ***************************************
 }
