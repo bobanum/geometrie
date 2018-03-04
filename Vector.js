@@ -78,7 +78,7 @@ class Vector extends Point {
 	/**
 	 * Returns a unitary vector at the origin with a given angle
 	 * @param   {number} angle The angle in radians
-	 * @returns {Point}  [[Description]]
+	 * @returns {Point}  New point of radius 1
 	 */
 	static unit(angle) {
 		return new Point(Math.cos(angle), Math.sin(angle));

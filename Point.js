@@ -371,7 +371,7 @@ class Point {
 	}
 	/**
 	 * Returns a new Point from given Object.
-	 * @param   {object}   val [[Description]]
+	 * @param   {object}   val Point-like object {x:x, y:y, z:z}
 	 * @returns {Point}    Resulting new Point object
 	 */
 	static fromObject(val) {
