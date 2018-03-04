@@ -53,7 +53,7 @@ class Vector extends Point {
 	 */
 	get angle() {
 		if (this._angle === null) {
-			this._angle = this.start.difference(this.end).theta;
+			this._angle = Point.difference(this.start, this.end).theta;
 		}
 		return this._angle;
 	}
@@ -67,7 +67,7 @@ class Vector extends Point {
 	 */
 	get norm() {
 		if (this._norm === null) {
-			this._norm = this.start.difference(this.end).r;
+			this._norm = Point.difference(this.start, this.end).r;
 		}
 		return this._norm;
 	}
@@ -90,8 +90,7 @@ class Vector extends Point {
 		return result;
 	}
 	fraction(ratio) {
-		return this.end.difference(this).multiply(ratio).add(this);
-
+		return Point.difference(this.end, this).multiply(ratio).add(this);
 	}
 
 }
