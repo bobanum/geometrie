@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Polyline.js - Documentation</title>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <span class="navicon"></span>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Point.html">Point</a><ul class='members'><li class='list-title'>Members</li><li data-type='member'><a href="Point.html#phi">phi</a></li><li data-type='member'><a href="Point.html#r">r</a></li><li data-type='member'><a href="Point.html#theta">theta</a></li><li data-type='member'><a href="Point.html#x">x</a></li><li data-type='member'><a href="Point.html#y">y</a></li><li data-type='member'><a href="Point.html#z">z</a></li></ul><ul class='methods'><li class='list-title'>Methods</li><li data-type='method'><a href="Point.html#.difference">difference</a></li><li data-type='method'><a href="Point.html#.from">from</a></li><li data-type='method'><a href="Point.html#.fromArray">fromArray</a></li><li data-type='method'><a href="Point.html#.fromObject">fromObject</a></li><li data-type='method'><a href="Point.html#.fromString">fromString</a></li><li data-type='method'><a href="Point.html#.init">init</a></li><li data-type='method'><a href="Point.html#.negation">negation</a></li><li data-type='method'><a href="Point.html#.product">product</a></li><li data-type='method'><a href="Point.html#.quotient">quotient</a></li><li data-type='method'><a href="Point.html#.sum">sum</a></li><li data-type='method'><a href="Point.html#_clearCartesian">_clearCartesian</a></li><li data-type='method'><a href="Point.html#_clearPolar">_clearPolar</a></li><li data-type='method'><a href="Point.html#_recurse">_recurse</a></li><li data-type='method'><a href="Point.html#add">add</a></li><li data-type='method'><a href="Point.html#clone">clone</a></li><li data-type='method'><a href="Point.html#divideBy">divideBy</a></li><li data-type='method'><a href="Point.html#fraction">fraction</a></li><li data-type='method'><a href="Point.html#moveBy">moveBy</a></li><li data-type='method'><a href="Point.html#moveTo">moveTo</a></li><li data-type='method'><a href="Point.html#multiply">multiply</a></li><li data-type='method'><a href="Point.html#negate">negate</a></li><li data-type='method'><a href="Point.html#rotate">rotate</a></li><li data-type='method'><a href="Point.html#setCartesian">setCartesian</a></li><li data-type='method'><a href="Point.html#setPolar">setPolar</a></li><li data-type='method'><a href="Point.html#subtract">subtract</a></li><li data-type='method'><a href="Point.html#toArray">toArray</a></li><li data-type='method'><a href="Point.html#toObject">toObject</a></li><li data-type='method'><a href="Point.html#toString">toString</a></li></ul></li><li><a href="Polyline.html">Polyline</a><ul class='members'><li class='list-title'>Members</li><li data-type='member'><a href="Polyline.html#_points">_points</a></li><li data-type='member'><a href="Polyline.html#length">length</a></li><li data-type='member'><a href="Polyline.html#points">points</a></li></ul><ul class='methods'><li class='list-title'>Methods</li><li data-type='method'><a href="Polyline.html#append">append</a></li><li data-type='method'><a href="Polyline.html#indexOf">indexOf</a></li><li data-type='method'><a href="Polyline.html#insertAt">insertAt</a></li><li data-type='method'><a href="Polyline.html#insertBefore">insertBefore</a></li><li data-type='method'><a href="Polyline.html#prepend">prepend</a></li><li data-type='method'><a href="Polyline.html#toString">toString</a></li></ul></li><li><a href="Vector.html">Vector</a><ul class='members'><li class='list-title'>Members</li><li data-type='member'><a href="Vector.html#angle">angle</a></li><li data-type='member'><a href="Vector.html#end">end</a></li><li data-type='member'><a href="Vector.html#norm">norm</a></li><li data-type='member'><a href="Vector.html#start">start</a></li></ul><ul class='methods'><li class='list-title'>Methods</li><li data-type='method'><a href="Vector.html#.unit">unit</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+
+    <h1 class="page-title">Polyline.js</h1>
+
+
+
+
+
+
+
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/*jslint browser:true,esnext:true*/
+/*exported Polyline*/
+class Polyline {
+	/**
+	 * Constructor
+	 * @param {Array} points Array of points
+	 */
+	constructor(points) {
+		/** @member {Array} */
+		this._points = points || [];
+	}
+	//*** GETTERS/SETTERS ***************************************
+	/**
+	 * Array of points
+	 * @type {Array}
+	 */
+	get points() {
+		return this._points;
+	}
+	set points(pts) {
+		this._points = [];
+		pts.forEach(function (pt) {
+			this._point.push(pt);
+		});
+	}
+	/**
+	 * Number of points in the polyline
+	 * @type {number}
+	 */
+	get length() {
+		return this._points.length;
+	}
+	/**
+	 * Returns the string of the points
+	 * @returns {string}
+	 */
+	toString() {
+		return this._points.join(" ");
+	}
+	//*** PRIVATE METHODS **************************************
+
+	//*** PUBLIC METHODS ***************************************
+	/**
+	 * Adds a point at the end
+	 * @param   {Point} pt The Point object to append
+	 * @returns {Point} The Point object just added
+	 */
+	append(point) {
+		this.insertAt(point, -1);
+		return point;
+	}
+	/**
+	 * Adds a point at the beginning
+	 * @param   {Point} point The Point object to prepend
+	 * @returns {Point} The Point object just added
+	 */
+	prepend(point) {
+		this.insertAt(point, 0);
+		return point;
+	}
+	/**
+	 * Adds a point at the a givent position
+	 * @param   {number} point The Point object to added
+	 * @param   {number} idx   The position of insertion
+	 * @returns {Point}  The Point object just added
+	 */
+	insertAt(point, idx) {
+		idx = (idx === undefined) ? this._points.length : idx;
+		this._points.splice(idx, 0, point);
+		point.polyline = this;
+		return point;
+	}
+	/**
+	 * Adds a point just before a givent point
+	 * @param   {Point} point     The Point object to append
+	 * @param   {Point} reference The reference Point
+	 * @returns {Point} The Point object just added
+	 */
+	insertBefore(point, reference) {
+		var idx;
+		if (reference) {
+			idx = this._points.indexOf(reference);
+			if (idx &lt; 0) {
+				throw "Reference point doesn't belong to polyline.";
+			}
+		} else {
+			idx = -1;
+		}
+		this.insertAt(point, idx);
+		return point;
+	}
+	/**
+	 * Returns the index of a point in the polyline
+	 * @param   {Point}  point The point object
+	 * @returns {number} The index of the object (of -1 if not found)
+	 */
+	indexOf(point) {
+		return this._points.indexOf(point);
+	}
+	//*** STATIC METHODS ***************************************
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc" target="_blank">JSDoc 3.5.5</a> on 3/4/2018 using the <a href="https://github.com/Grafluxe/boxy-jsdoc-template" target="_blank">boxy-jsdoc-template</a> theme.
+</footer>
+
+<script src="scripts/prettify/prettify.js"></script>
+<script src="scripts/prettify/lang-css.js"></script>
+<script src="scripts/script.js"></script>
+
+</body>
+</html>

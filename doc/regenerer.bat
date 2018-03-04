@@ -1,1 +1,0 @@
-jsdoc .. -d . --verbose

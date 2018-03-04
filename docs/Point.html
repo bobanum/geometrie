@@ -1,0 +1,3081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Point - Documentation</title>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <span class="navicon"></span>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Point.html">Point</a><ul class='members'><li class='list-title'>Members</li><li data-type='member'><a href="Point.html#phi">phi</a></li><li data-type='member'><a href="Point.html#r">r</a></li><li data-type='member'><a href="Point.html#theta">theta</a></li><li data-type='member'><a href="Point.html#x">x</a></li><li data-type='member'><a href="Point.html#y">y</a></li><li data-type='member'><a href="Point.html#z">z</a></li></ul><ul class='methods'><li class='list-title'>Methods</li><li data-type='method'><a href="Point.html#.difference">difference</a></li><li data-type='method'><a href="Point.html#.from">from</a></li><li data-type='method'><a href="Point.html#.fromArray">fromArray</a></li><li data-type='method'><a href="Point.html#.fromObject">fromObject</a></li><li data-type='method'><a href="Point.html#.fromString">fromString</a></li><li data-type='method'><a href="Point.html#.init">init</a></li><li data-type='method'><a href="Point.html#.negation">negation</a></li><li data-type='method'><a href="Point.html#.product">product</a></li><li data-type='method'><a href="Point.html#.quotient">quotient</a></li><li data-type='method'><a href="Point.html#.sum">sum</a></li><li data-type='method'><a href="Point.html#_clearCartesian">_clearCartesian</a></li><li data-type='method'><a href="Point.html#_clearPolar">_clearPolar</a></li><li data-type='method'><a href="Point.html#_recurse">_recurse</a></li><li data-type='method'><a href="Point.html#add">add</a></li><li data-type='method'><a href="Point.html#clone">clone</a></li><li data-type='method'><a href="Point.html#divideBy">divideBy</a></li><li data-type='method'><a href="Point.html#fraction">fraction</a></li><li data-type='method'><a href="Point.html#moveBy">moveBy</a></li><li data-type='method'><a href="Point.html#moveTo">moveTo</a></li><li data-type='method'><a href="Point.html#multiply">multiply</a></li><li data-type='method'><a href="Point.html#negate">negate</a></li><li data-type='method'><a href="Point.html#rotate">rotate</a></li><li data-type='method'><a href="Point.html#setCartesian">setCartesian</a></li><li data-type='method'><a href="Point.html#setPolar">setPolar</a></li><li data-type='method'><a href="Point.html#subtract">subtract</a></li><li data-type='method'><a href="Point.html#toArray">toArray</a></li><li data-type='method'><a href="Point.html#toObject">toObject</a></li><li data-type='method'><a href="Point.html#toString">toString</a></li></ul></li><li><a href="Polyline.html">Polyline</a><ul class='members'><li class='list-title'>Members</li><li data-type='member'><a href="Polyline.html#_points">_points</a></li><li data-type='member'><a href="Polyline.html#length">length</a></li><li data-type='member'><a href="Polyline.html#points">points</a></li></ul><ul class='methods'><li class='list-title'>Methods</li><li data-type='method'><a href="Polyline.html#append">append</a></li><li data-type='method'><a href="Polyline.html#indexOf">indexOf</a></li><li data-type='method'><a href="Polyline.html#insertAt">insertAt</a></li><li data-type='method'><a href="Polyline.html#insertBefore">insertBefore</a></li><li data-type='method'><a href="Polyline.html#prepend">prepend</a></li><li data-type='method'><a href="Polyline.html#toString">toString</a></li></ul></li><li><a href="Vector.html">Vector</a><ul class='members'><li class='list-title'>Members</li><li data-type='member'><a href="Vector.html#angle">angle</a></li><li data-type='member'><a href="Vector.html#end">end</a></li><li data-type='member'><a href="Vector.html#norm">norm</a></li><li data-type='member'><a href="Vector.html#start">start</a></li></ul><ul class='methods'><li class='list-title'>Methods</li><li data-type='method'><a href="Vector.html#.unit">unit</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+
+    <h1 class="page-title">Point</h1>
+
+
+
+
+
+
+
+<section>
+
+<header>
+    <span class="creds">
+
+
+
+    </span>
+
+    <hr>
+
+
+        <h2>
+        Point
+        </h2>
+
+
+</header>
+
+<article>
+    <div class="container-overview">
+
+
+
+
+
+
+
+<div class="group" id="Point">
+
+
+    <h4 class="name"><span class="type-signature"></span>new <b>Point</b><span class="signature">(<span class="sig-params">x<span class="params-divider">, </span>y<span class="params-divider">, </span>z</span>)</span><span class="type-signature"></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Constructor</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+        <span class="name">x</span><span class="type"><span class="param-type">:number</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>X-coordinate</p></div>
+
+
+
+
+        <span class="name">y</span><span class="type"><span class="param-type">:number</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>Y-coordinate</p></div>
+
+
+
+
+        <span class="name">z</span><span class="type"><span class="param-type">:number</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>Z-coordinate</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line9">line 9</a></div>
+
+
+</div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <h3 class="subsection-title">Members</h3>
+
+
+
+
+<div class="group" id="phi">
+
+<h4 class="name"><span class="type-signature"></span>phi<span class="type-signature">:number</span></h4>
+
+
+
+
+<div class="description">
+    <p>The polar angle (radian)</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line92">line 92</a></div>
+
+
+</div>
+
+
+
+
+<div class="group" id="r">
+
+<h4 class="name"><span class="type-signature"></span>r<span class="type-signature">:number</span></h4>
+
+
+
+
+<div class="description">
+    <p>The polar radius</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line68">line 68</a></div>
+
+
+</div>
+
+
+
+
+<div class="group" id="theta">
+
+<h4 class="name"><span class="type-signature"></span>theta<span class="type-signature">:number</span></h4>
+
+
+
+
+<div class="description">
+    <p>The polar angle (radian)</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line82">line 82</a></div>
+
+
+</div>
+
+
+
+
+<div class="group" id="x">
+
+<h4 class="name"><span class="type-signature"></span>x<span class="type-signature">:number</span></h4>
+
+
+
+
+<div class="description">
+    <p>The X-coordinate</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line26">line 26</a></div>
+
+
+</div>
+
+
+
+
+<div class="group" id="y">
+
+<h4 class="name"><span class="type-signature"></span>y<span class="type-signature">:number</span></h4>
+
+
+
+
+<div class="description">
+    <p>The Y-coordinate</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line40">line 40</a></div>
+
+
+</div>
+
+
+
+
+<div class="group" id="z">
+
+<h4 class="name"><span class="type-signature"></span>z<span class="type-signature">:number</span></h4>
+
+
+
+
+<div class="description">
+    <p>The Z-coordinate</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line54">line 54</a></div>
+
+
+</div>
+
+
+
+
+
+        <h3 class="subsection-title">Methods</h3>
+
+
+
+
+
+
+
+
+<div class="group" id=".difference">
+
+
+    <h4 class="name"><span class="type-signature">(static) </span><b>difference</b><span class="signature">(<span class="sig-params">pt</span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Returns a new Point object with the difference of the given points</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+        <span class="name">pt</span><span class="type"><span class="param-type">:variable</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>See method _recurse</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <ul>
+<li>this</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line241">line 241</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id=".from">
+
+
+    <h4 class="name"><span class="type-signature">(static) </span><b>from</b><span class="signature">(<span class="sig-params">val</span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Returns a new Point from given data. Calls appropriate &quot;from&quot; method according to data type</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+        <span class="name">val</span><span class="type"><span class="param-type">:mixed</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>Data to parse</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <p>Resulting new Point object</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line391">line 391</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id=".fromArray">
+
+
+    <h4 class="name"><span class="type-signature">(static) </span><b>fromArray</b><span class="signature">(<span class="sig-params">val</span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Returns a new Point from given Array.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+        <span class="name">val</span><span class="type"><span class="param-type">:Array.&lt;number></span></span>
+
+
+
+
+
+
+    <div class="description last"><p>Array of coordinates [x, y, z]</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <p>Resulting new Point object</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line363">line 363</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id=".fromObject">
+
+
+    <h4 class="name"><span class="type-signature">(static) </span><b>fromObject</b><span class="signature">(<span class="sig-params">val</span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Returns a new Point from given Object.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+        <span class="name">val</span><span class="type"><span class="param-type">:object</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>[[Description]]</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <p>Resulting new Point object</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line377">line 377</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id=".fromString">
+
+
+    <h4 class="name"><span class="type-signature">(static) </span><b>fromString</b><span class="signature">(<span class="sig-params">val</span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Returns a new Point from given string.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+        <span class="name">val</span><span class="type"><span class="param-type">:string</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>String to parse. Must be of format : &quot;x, y, z&quot;</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <p>A new Point Object</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line354">line 354</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id=".init">
+
+
+    <h4 class="name"><span class="type-signature">(static) </span><b>init</b><span class="signature">(<span class="sig-params"></span>)</span><span class="type-signature"></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Inits static properties</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line405">line 405</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id=".negation">
+
+
+    <h4 class="name"><span class="type-signature">(static) </span><b>negation</b><span class="signature">(<span class="sig-params">pt</span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Returns new Point with opposite signes</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+        <span class="name">pt</span><span class="type"><span class="param-type">:<a href="Point.html">Point</a></span></span>
+
+
+
+
+
+
+    <div class="description last"><p>Point to negate</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <ul>
+<li>new Point object</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line288">line 288</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id=".product">
+
+
+    <h4 class="name"><span class="type-signature">(static) </span><b>product</b><span class="signature">(<span class="sig-params">pt</span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Returns a new Point object with the product of the given points</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+        <span class="name">pt</span><span class="type"><span class="param-type">:variable</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>See method _recurse</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <ul>
+<li>this</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line257">line 257</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id=".quotient">
+
+
+    <h4 class="name"><span class="type-signature">(static) </span><b>quotient</b><span class="signature">(<span class="sig-params">pt</span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Returns a new Point object with the quotient of the given points</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+        <span class="name">pt</span><span class="type"><span class="param-type">:variable</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>See method _recurse</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <ul>
+<li>new Point object</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line273">line 273</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id=".sum">
+
+
+    <h4 class="name"><span class="type-signature">(static) </span><b>sum</b><span class="signature">(<span class="sig-params">pt</span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Returns a new Point object with sum of the given points</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+        <span class="name">pt</span><span class="type"><span class="param-type">:variable</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>See method _recurse</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <ul>
+<li>this</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line225">line 225</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id="_clearCartesian">
+
+
+    <h4 class="name"><span class="type-signature">(private) </span><b>_clearCartesian</b><span class="signature">(<span class="sig-params"></span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Clears cartesian coordinates (after setting a polar coordinate)</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <p>this</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line120">line 120</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id="_clearPolar">
+
+
+    <h4 class="name"><span class="type-signature">(private) </span><b>_clearPolar</b><span class="signature">(<span class="sig-params"></span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Clears polar coordinates (after setting a cartesian coordinate)</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <p>this</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line111">line 111</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id="_recurse">
+
+
+    <h4 class="name"><span class="type-signature">(private) </span><b>_recurse</b><span class="signature">(<span class="sig-params">fct<span class="params-divider">, </span>pt</span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Applies a function to several elements
+... many values as parameters
+... an array of values
+... a Point object (normal behavior)
+... a scalar value. Applies the value to each coordinate.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+        <span class="name">fct</span><span class="type"><span class="param-type">:function</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>The function to apply to each coordinates</p></div>
+
+
+
+
+        <span class="name">pt</span><span class="type"><span class="param-type">:object</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>Object Arguments, Array, Point or scalar value</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <ul>
+<li>this</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line170">line 170</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id="add">
+
+
+    <h4 class="name"><span class="type-signature"></span><b>add</b><span class="signature">(<span class="sig-params"></span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Add one or many points to object</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+
+
+
+
+
+    <div class="description last"><p>See method _recurse</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <ul>
+<li>this</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line217">line 217</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id="clone">
+
+
+    <h4 class="name"><span class="type-signature"></span><b>clone</b><span class="signature">(<span class="sig-params"></span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Returns a clone of the object</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <ul>
+<li>The clone</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line346">line 346</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id="divideBy">
+
+
+    <h4 class="name"><span class="type-signature"></span><b>divideBy</b><span class="signature">(<span class="sig-params"></span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Divide by the given points</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+
+
+
+
+
+    <div class="description last"><p>{@see _recurse}</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <ul>
+<li>this</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line265">line 265</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id="fraction">
+
+
+    <h4 class="name"><span class="type-signature"></span><b>fraction</b><span class="signature">(<span class="sig-params">pt<span class="params-divider">, </span>ratio</span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Returns new Point between this ans given Point at givent ration</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+        <span class="name">pt</span><span class="type"><span class="param-type">:<a href="Point.html">Point</a></span></span>
+
+
+
+
+
+
+    <div class="description last"><p>Destination point</p></div>
+
+
+
+
+        <span class="name">ratio</span><span class="type"><span class="param-type">:number</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>Potion of vector to place new point</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <p>new mid-Point</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line297">line 297</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id="moveBy">
+
+
+    <h4 class="name"><span class="type-signature"></span><b>moveBy</b><span class="signature">(<span class="sig-params">x<span class="params-divider">, </span>y</span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Moves the point by a given increment</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+        <span class="name">x</span><span class="type"><span class="param-type">:object</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>A point or the x coordinate</p></div>
+
+
+
+
+        <span class="name">y</span><span class="type"><span class="param-type">:number</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>The y coordinate</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <ul>
+<li>this</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line333">line 333</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id="moveTo">
+
+
+    <h4 class="name"><span class="type-signature"></span><b>moveTo</b><span class="signature">(<span class="sig-params">x<span class="params-divider">, </span>y</span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Moves the point to a given location</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+        <span class="name">x</span><span class="type"><span class="param-type">:object</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>A point or the x coordinate</p></div>
+
+
+
+
+        <span class="name">y</span><span class="type"><span class="param-type">:number</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>The y coordinate</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <ul>
+<li>this</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line318">line 318</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id="multiply">
+
+
+    <h4 class="name"><span class="type-signature"></span><b>multiply</b><span class="signature">(<span class="sig-params"></span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Multiplies the given points</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+
+
+
+
+
+    <div class="description last"><p>See method _recurse</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <ul>
+<li>this</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line249">line 249</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id="negate">
+
+
+    <h4 class="name"><span class="type-signature"></span><b>negate</b><span class="signature">(<span class="sig-params"></span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Inverts the signe of the coordinates</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <ul>
+<li>this</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line280">line 280</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id="rotate">
+
+
+    <h4 class="name"><span class="type-signature"></span><b>rotate</b><span class="signature">(<span class="sig-params">angle</span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Rotates the point around the origin</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+        <span class="name">angle</span><span class="type"><span class="param-type">:number</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>Radian angle</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <ul>
+<li>this</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line305">line 305</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id="setCartesian">
+
+
+    <h4 class="name"><span class="type-signature"></span><b>setCartesian</b><span class="signature">(<span class="sig-params">x<span class="params-divider">, </span>y</span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Sets the x, y and z at the same time (resets polar)</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+        <span class="name">x</span><span class="type"><span class="param-type">:number</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>The X-coordinate</p></div>
+
+
+
+
+        <span class="name">y</span><span class="type"><span class="param-type">:number</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>The Y-coordinate</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <p>this</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line192">line 192</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id="setPolar">
+
+
+    <h4 class="name"><span class="type-signature"></span><b>setPolar</b><span class="signature">(<span class="sig-params">radius<span class="params-divider">, </span>theta</span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Sets the r and theta at the same time (resets cartesian)</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+        <span class="name">radius</span><span class="type"><span class="param-type">:number</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>The r-coordinate</p></div>
+
+
+
+
+        <span class="name">theta</span><span class="type"><span class="param-type">:number</span></span>
+
+
+
+
+
+
+    <div class="description last"><p>The polar angle</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <p>this</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line205">line 205</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id="subtract">
+
+
+    <h4 class="name"><span class="type-signature"></span><b>subtract</b><span class="signature">(<span class="sig-params"></span>)</span><span class="type-signature">:<a href="Point.html">Point</a></span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Subtracts given points</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+
+
+
+
+
+    <div class="description last"><p>See method _recurse</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:<a href="Point.html">Point</a></span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <ul>
+<li>this</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line233">line 233</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id="toArray">
+
+
+    <h4 class="name"><span class="type-signature"></span><b>toArray</b><span class="signature">(<span class="sig-params">dim<span class="signature-attributes">opt</span></span>)</span><span class="type-signature">:Array</span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Returns an array of the coordinates [x,y,z]</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+        <span class="name">dim</span><span class="type"><span class="param-type">:number</span></span>
+
+
+
+        <span class="default">
+
+            = this.dimensions
+
+        </span>
+
+
+
+        <span class="attributes">
+
+            (optional)<br>
+
+
+
+
+
+        </span>
+
+
+    <div class="description last"><p>Number of dimensions to consider (2 or 3)</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:Array</span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <ul>
+<li>Resulting coordinates</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line138">line 138</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id="toObject">
+
+
+    <h4 class="name"><span class="type-signature"></span><b>toObject</b><span class="signature">(<span class="sig-params">dim<span class="signature-attributes">opt</span></span>)</span><span class="type-signature">:Object</span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Returns a generic object with the coordinates {x:x,y:y,z:z}</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+        <span class="name">dim</span><span class="type"><span class="param-type">:number</span></span>
+
+
+
+        <span class="default">
+
+            = this.dimensions
+
+        </span>
+
+
+
+        <span class="attributes">
+
+            (optional)<br>
+
+
+
+
+
+        </span>
+
+
+    <div class="description last"><p>Number of dimensions to consider (2 or 3)</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:Object</span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <ul>
+<li>Resulting coordinates</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line151">line 151</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="group" id="toString">
+
+
+    <h4 class="name"><span class="type-signature"></span><b>toString</b><span class="signature">(<span class="sig-params">dim<span class="signature-attributes">opt</span></span>)</span><span class="type-signature">:string</span></h4>
+
+
+
+
+
+<div class="description">
+    <p>Returns the coordinates formatted &quot;x,y,z&quot;</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+
+
+<div class="params">
+
+
+
+        <span class="name">dim</span><span class="type"><span class="param-type">:number</span></span>
+
+
+
+        <span class="default">
+
+            = this.dimensions
+
+        </span>
+
+
+
+        <span class="attributes">
+
+            (optional)<br>
+
+
+
+
+
+        </span>
+
+
+    <div class="description last"><p>Number of dimensions to consider (2 or 3)</p></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns</h5>
+
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        <span class="param-type">:string</span>
+    </dd>
+</dl>
+
+<div class="param-desc">
+    <p>Formatted coordinates</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="src">Source: <a href="Point.js.html">Point.js</a>, <a href="Point.js.html#line129">line 129</a></div>
+
+
+</div>
+
+
+
+
+
+
+
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc" target="_blank">JSDoc 3.5.5</a> on 3/4/2018 using the <a href="https://github.com/Grafluxe/boxy-jsdoc-template" target="_blank">boxy-jsdoc-template</a> theme.
+</footer>
+
+<script src="scripts/prettify/prettify.js"></script>
+<script src="scripts/prettify/lang-css.js"></script>
+<script src="scripts/script.js"></script>
+
+</body>
+</html>
